@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/edit_bar_categorydisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#307927">
+
+        <ImageView
+            android:id="@+id/expensePic"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:src="@drawable/bhudko" />
+
+        <TextView
+            android:id="@+id/fundtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/expensePic"
+            android:layout_toRightOf="@+id/expensePic"
+            android:fontFamily="serif-monospace"
+            android:gravity="start"
+            android:text="Fund"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fdfd06"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_bar_categorydisplay">
+
+        <TextView
+            android:id="@+id/selectedCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#7fa500"
+            android:padding="8dp"
+            android:text="Enter fund fitting your category"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/edit_date_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectedCategory"
+            android:background="#dfe0d9"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_previous_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/previous_arrow" />
+
+            <TextView
+                android:id="@+id/edit_date_bar_dateview"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="17dip"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_next_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/next_arrow" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edit_date_bar"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:id="@+id/s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/donationAmt"
+                    android:layout_alignBaseline="@+id/salaryAmt"
+                    android:layout_alignBottom="@+id/salaryAmt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="43dp"
+                    android:layout_marginStart="43dp"
+                    android:gravity="right"
+                    android:text="Salary:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/salaryAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/s"
+                    android:layout_toRightOf="@+id/s"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/loanAmt"
+                    android:layout_alignBaseline="@+id/donationAmt"
+                    android:layout_alignBottom="@+id/donationAmt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/salaryAmt"
+                    android:layout_toStartOf="@+id/salaryAmt"
+                    android:gravity="right"
+                    android:text="Donation:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/donationAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/salaryAmt"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toEndOf="@+id/d"
+                    android:layout_toRightOf="@+id/d"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/loanAmt"
+                    android:layout_alignBottom="@+id/loanAmt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/donationAmt"
+                    android:layout_toStartOf="@+id/donationAmt"
+                    android:gravity="right"
+                    android:text="Loan:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/loanAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/donationAmt"
+                    android:layout_alignStart="@+id/donationAmt"
+                    android:layout_below="@+id/donationAmt"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toEndOf="@+id/l"
+                    android:layout_toRightOf="@+id/l"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/rewardAmt"
+                    android:layout_alignBottom="@+id/rewardAmt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/rewardAmt"
+                    android:layout_toStartOf="@+id/rewardAmt"
+                    android:gravity="right"
+                    android:text="Reward:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/rewardAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/donationAmt"
+                    android:layout_alignStart="@+id/donationAmt"
+                    android:layout_below="@+id/loanAmt"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toEndOf="@+id/l"
+                    android:layout_toRightOf="@+id/l"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/o"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/otherAmt"
+                    android:layout_alignBottom="@+id/otherAmt"
+                    android:layout_alignEnd="@+id/r"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignRight="@+id/r"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="Other:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/otherAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/rewardAmt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/rewardAmt"
+                    android:layout_below="@+id/rewardAmt"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginRight="7dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textSize="24dp" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:fitsSystemWindows="true"
+                android:text="CLEAR" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:fitsSystemWindows="true"
+                android:text="SAVE" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

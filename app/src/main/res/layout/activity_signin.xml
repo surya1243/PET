@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E10800"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="description"
+        android:paddingTop="16dp"
+        android:src="@drawable/front" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fffff0"
+        android:paddingTop="10dp"
+        android:text="Personal Expense Tracker"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:text="@string/pet"
+        android:textColor="#fffff0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/uNamedisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Hello Shankar"
+                android:padding="8dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/lock3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/donationAmt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/donationAmt"
+                android:src="@drawable/lock" />
+
+            <EditText
+                android:id="@+id/donationAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_below="@+id/uNamedisplay"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/lock3"
+                android:layout_toEndOf="@+id/lock3" />
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lock3"
+
+                android:padding="12dp"
+                android:text="ok"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/confirmButton"
+                android:layout_marginTop="36dp"
+                android:clickable="true"
+                android:linksClickable="false"
+                android:text="Forgot your password?"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#2A94D6"
+                android:textIsSelectable="false" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PET</string>
+    <string name="pet">[PET]</string>
+    <string name="UserName">User Name</string>
+    <string name="password">Password</string>
+    <string name="food">Food</string>
+
+    <string-array name="category">
+        <item>Food</item>
+        <item>Clothing</item>
+        <item>Transportation</item>
+        <item>Education</item>
+        <item>Gadget</item>
+        <item>Entertainment</item>
+        <item>Medical</item>
+        <item>Living</item>
+        <item>Grocery</item>
+        <item>Communication</item>
+        <item>Gift</item>
+        <item>Other</item>
+    </string-array>
+</resources>

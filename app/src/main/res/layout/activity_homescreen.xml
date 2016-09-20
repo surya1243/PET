@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7fa500"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="description"
+        android:paddingTop="16dp"
+        android:src="@drawable/meroa" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="Personal Expense Tracker"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:text="@string/pet"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:orientation="vertical"
+       android:paddingTop="8dp"
+       android:background="#e10800">
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="8dp"
+           android:orientation="horizontal"
+           android:paddingLeft="12dp"
+
+           android:paddingRight="12dp"
+           android:background="#ffffff">
+
+           <ImageView
+               android:id="@+id/cup"
+               android:layout_width="52dp"
+               android:layout_height="52dp"
+               android:src="@drawable/bhudko" />
+
+           <TextView
+               android:id="@+id/budget"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="30dp"
+               android:layout_gravity="center"
+               android:layout_toEndOf="@+id/cup"
+               android:layout_toRightOf="@+id/cup"
+               android:text="Budget"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+           <TextView
+               android:id="@+id/rs"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_toRightOf="@+id/budget"
+               android:layout_marginLeft="60dp"
+               android:text="Rs."
+               android:layout_gravity="center"
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+           <TextView
+               android:id="@+id/budgetAmt"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"
+               android:layout_marginEnd="2dp"
+               android:layout_toEndOf="@+id/rs"
+               android:layout_toRightOf="@+id/rs"
+               android:text="18000"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="8dp"
+           android:background="#fff"
+           android:paddingLeft="12dp"
+           android:paddingRight="12dp"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/cup1"
+               android:layout_width="52dp"
+               android:layout_height="52dp"
+               android:src="@drawable/expense" />
+
+           <TextView
+               android:id="@+id/expense"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_toEndOf="@+id/cup1"
+               android:layout_toRightOf="@+id/cup1"
+               android:text="Expense"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+           <TextView
+               android:id="@+id/rs1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_toRightOf="@+id/expense"
+               android:text="Rs."
+               android:layout_marginLeft="16dp"
+               android:layout_gravity="center"
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+           <TextView
+               android:id="@+id/expenseAmt"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="2dp"
+               android:layout_marginStart="2dp"
+               android:layout_toEndOf="@+id/rs1"
+               android:layout_toRightOf="@+id/rs1"
+               android:text="18000"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="8dp"
+           android:background="#fff"
+           android:orientation="horizontal"
+           android:paddingLeft="12dp"
+           android:paddingRight="12dp">
+
+           <ImageView
+               android:id="@+id/cup2"
+               android:layout_width="52dp"
+               android:layout_height="52dp"
+               android:src="@drawable/result" />
+
+           <TextView
+               android:id="@+id/balance"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_toEndOf="@+id/cup2"
+               android:layout_toRightOf="@+id/cup2"
+               android:text="Balance"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+           <TextView
+               android:id="@+id/rs3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_toRightOf="@+id/expense"
+               android:text="Rs."
+               android:layout_marginLeft="20dp"
+               android:layout_gravity="center"
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+           <TextView
+               android:id="@+id/balanceAmt"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="2dp"
+               android:layout_marginStart="2dp"
+               android:layout_toEndOf="@+id/rs3"
+               android:layout_toRightOf="@+id/rs3"
+               android:text="18000"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       </LinearLayout>
+
+   </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/edit_bar_categorydisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#307927">
+
+        <ImageView
+            android:id="@+id/expensePic"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:src="@drawable/expense" />
+
+        <TextView
+            android:id="@+id/wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/expensePic"
+            android:layout_toRightOf="@+id/expensePic"
+            android:fontFamily="serif-monospace"
+            android:gravity="start"
+            android:text="Wish List"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fdfd06"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_bar_categorydisplay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/selectedCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#7fa500"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Please fill up your wishes"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/edit_date_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#dfe0d9"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@+id/selectedCategory"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_previous_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/previous_arrow" />
+
+            <TextView
+                android:id="@+id/edit_date_bar_dateview"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="17dip"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_next_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/next_arrow" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/addnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:fitsSystemWindows="true"
+                android:text="Add Wishlist" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:fitsSystemWindows="true"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

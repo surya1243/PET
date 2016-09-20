@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/edit_bar_categorydisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#307927">
+
+        <ImageView
+            android:id="@+id/expensePic"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:src="@drawable/expense" />
+
+        <TextView
+            android:id="@+id/edit_bar_categoryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/expensePic"
+            android:layout_toRightOf="@+id/expensePic"
+            android:fontFamily="serif-monospace"
+            android:gravity="start"
+            android:text="Expense"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fdfd06"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_bar_categorydisplay">
+
+        <TextView
+            android:id="@+id/selectedCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#7fa500"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Choose your category"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/edit_date_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectedCategory"
+            android:background="#dfe0d9"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_previous_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/previous_arrow" />
+
+            <TextView
+                android:id="@+id/edit_date_bar_dateview"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="17dip"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/edit_date_bar_next_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/next_arrow" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_date_bar"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/textamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edit_amount"
+                android:layout_alignBottom="@+id/edit_amount"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="Amount"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/edit_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/textamount"
+                android:layout_toRightOf="@+id/textamount"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textqty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edit_qty"
+                android:layout_alignBottom="@+id/edit_qty"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="Quantity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/edit_qty"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_amount"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/textqty"
+                android:layout_toRightOf="@+id/textqty"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:textSize="24dp" />
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_qty"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="7dp"
+                android:background="#d8dddde4"
+                android:gravity="top"
+                android:hint="Description"
+                android:minLines="3"
+                android:padding="13dp" />
+
+        </RelativeLayout>
+
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/addnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:fitsSystemWindows="true"
+                android:text="Add Next" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:fitsSystemWindows="true"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
